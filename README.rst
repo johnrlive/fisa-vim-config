@@ -218,7 +218,7 @@ Super easy installation
 
     sudo apt-get install vim exuberant-ctags git
     sudo pip install dbgp vim-debug pep8 flake8 pyflakes isort
-    wget https://raw.github.com/johnrlive/fisa-vim-config/master/.vimrc
+    
 
   (if you don't have Pip, find it here: `pip <http://pypi.python.org/pypi/pip>`_)
 
@@ -227,6 +227,10 @@ Super easy installation
   Place the file ``.vimrc`` on your home folder.
 
   Example: my linux user is "fisa", so now I have: ``/home/fisa/.vimrc``.
+  
+    cd ~ 
+    git clone http://github.com/johnrlive/fisa-vim-config
+    ln -s ~/fisa-vim-config/.vimrc ~/.vimrc
 
 * **Open vim**
 
