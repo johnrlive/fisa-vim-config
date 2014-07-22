@@ -17,7 +17,7 @@ You can report any issue on the `Issues <https://github.com/fisadev/fisa-vim-con
 
 (Juan Pedro Fisanotti)
 
-`Download <https://raw.github.com/fisadev/fisa-vim-config/master/.vimrc>`_
+`Download <https://raw.github.com/johnrlive/fisa-vim-config/master/.vimrc>`_
 
 Features or it didn't happen!
 -----------------------------
@@ -218,12 +218,13 @@ Super easy installation
 
     sudo apt-get install vim exuberant-ctags git
     sudo pip install dbgp vim-debug pep8 flake8 pyflakes isort
+    wget https://raw.github.com/johnrlive/fisa-vim-config/master/.vimrc
 
   (if you don't have Pip, find it here: `pip <http://pypi.python.org/pypi/pip>`_)
 
 * **Put the configuration files where they belong**
 
-  Place the file ``.vimrc`` on your linux home folder.
+  Place the file ``.vimrc`` on your home folder.
 
   Example: my linux user is "fisa", so now I have: ``/home/fisa/.vimrc``.
 
