@@ -1,0 +1,45 @@
+" ===========================================================================
+" Custom configurations
+  let mapleader=","
+
+" Set backspace to work in iTerm
+  set backspace=2
+
+" enable mouse
+  set mouse=a
+
+" disable vim config
+  set nobackup
+  set noswapfile
+
+" get out of insert mode with 'ii'
+  imap ii <Esc>
+
+" get out of insert mode with cmd-i forMacVim
+"  imap <D-i> <Esc>
+
+" Search
+  nmap <leader>ss  :%s/
+  vmap <leader>ss  :s/
+
+" shortcut to save all
+  nmap <Leader>s :wa<cr>
+
+" Split screen
+  map vv   :vsp<CR>
+  map ss   :sp<CR>
+
+" Undo/redo - MacVim)
+  map <D-z>       :earlier 1<CR>
+  map <D-Z>       :later 1<CR>
+
+" Undo/redo - in Vim
+  map <Leader>z   :earlier 1<CR>
+  map <Leader>Z   :later 1<CR>
+
+" Easy access to the shell
+  map <Leader>, :!
+
+" Easier to call colon
+  map ; :
+
