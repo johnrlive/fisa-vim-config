@@ -4,7 +4,7 @@ endif
 
 if filereadable($HOME . "/.vimrc.bundles.local")
       source ~/.vimrc.bundles.local
-endif
+endif 
 
 " ============================================================================
 " Vundle initialization
