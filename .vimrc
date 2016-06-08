@@ -4,7 +4,7 @@ endif
 
 if filereadable($HOME . "/.vimrc.bundles.local")
       source ~/.vimrc.bundles.local
-endif 
+endif
 
 " ============================================================================
 " Vundle initialization
@@ -251,7 +251,7 @@ let g:tagbar_autofocus = 1
 " NERDTree -----------------------------
 
 " toggle nerdtree display
-map \ :NERDTreeToggle<CR>
+map <return> :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
 nmap ,t :NERDTreeFind<CR>
 " don;t show these file types
