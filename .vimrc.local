@@ -43,3 +43,13 @@
 " Easier to call colon
   map ; :
 
+" Uses Enter to fold and unfold 
+  let NerdTreeHijackNetrw = 0
+  nmap <return> :NERDTreeToggle<CR>
+  nmap <leader>G :NERDTreeFind<CR>
+
+  set clipboard=unnamed
+
+  nmap <C-a> :sp
+
+  "nnoremap <Leader>a :call RunAllSpecs()<CR>
