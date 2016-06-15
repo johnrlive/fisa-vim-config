@@ -2,10 +2,6 @@ if filereadable($HOME . "/.vimrc.local")
       source ~/.vimrc.local
 endif
 
-if filereadable($HOME . "/.vimrc.bundles.local")
-      source ~/.vimrc.bundles.local
-endif
-
 " ============================================================================
 " Vundle initialization
 " Avoid modify this section, unless you are very sure of what you are doing
@@ -37,6 +33,8 @@ Bundle 'gmarik/vundle'
 " You can disable or add new ones here:
 
 " Plugins from github repos:
+" https://github.com/tweekmonster/django-plus.vim
+Bundle 'tweekmonster/django-plus.vim'
 
 " Python and PHP Debugger
 Bundle 'fisadev/vim-debug.vim'

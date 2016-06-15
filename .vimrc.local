@@ -3,7 +3,7 @@
   let mapleader=","
 
 " Set backspace to work in iTerm
-  set backspace=2
+" set backspace=2
 
 " enable mouse
   set mouse=a
