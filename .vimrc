@@ -1,6 +1,80 @@
-if filereadable($HOME . "/.vimrc.local")
-      source ~/.vimrc.local
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
 endif
+
+" ===========================================================================
+" Custom configurations
+
+" Set leader key
+  let mapleader=","
+
+" Fix to disable autoindenet when copying 
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+  set pastetoggle=<F2>
+  set copyindent
+  set clipboard=unnamed
+
+" Set backspace to work in iTerm
+" set backspace=2
+
+" enable mouse
+  set mouse=a
+
+" disable vim config
+  set nobackup
+  set noswapfile
+
+" get out of insert mode with 'ii'
+  imap ii <Esc>
+
+" get out of insert mode with cmd-i forMacVim
+"  imap <D-i> <Esc>
+
+" Search
+  nmap <leader>ss  :%s/
+  vmap <leader>ss  :s/
+
+" shortcut to save all
+  nmap <Leader>s :wa<cr>
+
+" Split screen
+  map vv   :vsp<CR>
+  map ss   :sp<CR>
+
+" Undo/redo - MacVim)
+  map <D-z>       :earlier 1<CR>
+  map <D-Z>       :later 1<CR>
+
+" Undo/redo - in Vim
+  map <Leader>z   :earlier 1<CR>
+  map <Leader>Z   :later 1<CR>
+
+" Easy access to the shell
+  map <Leader>, :!
+
+" Easier to call colon
+  map ; :
+
+" Uses Enter to fold and unfold
+"  let NerdTreeHijackNetrw = 0
+"  nmap <return> :NERDTreeToggle<CR>
+"  nmap <leader>G :NERDTreeFind<CR>
+
+  nmap <C-a> :sp
+
+
+
 
 " ============================================================================
 " Vundle initialization
@@ -37,7 +111,8 @@ Bundle 'gmarik/vundle'
 Bundle 'tweekmonster/django-plus.vim'
 
 " Python and PHP Debugger
-Bundle 'fisadev/vim-debug.vim'
+" Bundle 'fisadev/vim-debug.vim'
+
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 " Code commenter
@@ -256,12 +331,14 @@ nmap ,t :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
 
+" Map for paste ------------------------
+
 " Tasklist ------------------------------
 
 " show pending tasks list
-map <F2> :TaskList<CR>
+map <F3> :TaskList<CR>
 
-" Vim-debug ------------------------------
+ " Vim-debug ------------------------------
 
 " disable default mappings, have a lot of conflicts with other plugins
 let g:vim_debug_disable_mappings = 1
